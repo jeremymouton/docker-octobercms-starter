@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  octobercms:
+    image: aspendigital/octobercms:php7.1-apache
+    ports:
+      - 80:80
+    environment:
+      TZ: ${TZ:-America/Denver}
+    volumes:
+      - ./docker-php.ini:/usr/local/etc/php/conf.d/docker-compose-php.ini
+      - ./config/docker:/var/www/html/config/docker
+      - ./plugins:/var/www/html/plugins
+
+      # - ./storage/app:/var/www/html/storage/app
+      # - ./storage/logs:/var/www/html/storage/logs
+      # - ./storage/database.sqlite:/var/www/html/storage/database.sqlite
+      # - ./themes:/var/www/html/themes
