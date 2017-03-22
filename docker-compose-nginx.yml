@@ -23,6 +23,7 @@ services:
       - ./config/docker:/var/www/html/config/docker
       - ./plugins:/var/www/html/plugins
 
+      # - ./.env:/var/www/html/.env
       # - ./storage/app:/var/www/html/storage/app
       # - ./storage/logs:/var/www/html/storage/logs
       # - ./storage/database.sqlite:/var/www/html/storage/database.sqlite
