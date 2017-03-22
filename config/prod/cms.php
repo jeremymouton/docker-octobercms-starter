@@ -5,6 +5,7 @@
 */
 
 return [
+    'activeTheme' => 'starter',
     'edgeUpdates' => false,
     'disableCoreUpdates' => true,
     'backendTimezone' => env('TZ', 'America/Denver'),

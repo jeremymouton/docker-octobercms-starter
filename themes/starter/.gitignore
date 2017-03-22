@@ -1,0 +1,8 @@
+bower_components
+node_modules
+.DS_Store
+
+# Ignore meta, content and static page folders managed by backend users
+
+content
+meta

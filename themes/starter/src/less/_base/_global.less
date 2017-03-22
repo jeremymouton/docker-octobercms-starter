@@ -1,0 +1,41 @@
+/**
+ * Global
+ *
+ */
+
+html,
+body {
+  font-size: 16PX; // ignored by pxtorem
+}
+
+body {
+  color: @base-text-color;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+
+/*
+ * Misc
+ *
+ */
+
+a {
+  &,
+	&:focus,
+	&:active,
+	&:hover { color: @base-text-color; }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

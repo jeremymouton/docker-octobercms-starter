@@ -1,0 +1,12 @@
+name: "Starter (demo)"
+description: "A starter for October CMS"
+author: "Aspen Digital"
+homepage: ""
+code: ""
+# Theme options
+form:
+  fields:
+    site_name:
+      label: Site name
+      comment: The website name as it should appear on the frontend
+      default: Site name
