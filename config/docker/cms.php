@@ -8,6 +8,7 @@ return [
     'edgeUpdates' => false,
     'disableCoreUpdates' => true,
     'backendTimezone' => env('TZ', 'America/Denver'),
+    'backendSkin' => 'AspenDigital\Backend\Skins\Admin',
     'linkPolicy' => env('APP_LINKPOLICY', 'detect'),
     'backendForceSecure' => false,
 ];
