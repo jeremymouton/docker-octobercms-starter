@@ -1,4 +1,9 @@
 ==
-<script src="{{ 'assets/js/script.js' | theme }}"></script>
+{% if this.environment == 'dev' %}
+<script src="{{ 'assets/js/bundle.js' | theme }}"></script>
+{% else %}
+<script src="{{ 'assets/js/bundle.min.js' | theme }}"></script>
+{% endif %}
+
 {% framework extras %}
 {% scripts %}
