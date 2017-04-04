@@ -11,25 +11,37 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   background: transparent;
   border: 1px solid transparent;
+  border-radius: 2px;
   white-space: nowrap;
   line-height: 1em;
-  padding: 0;
+  padding: .6em 1em;
+  font-size: 1em;
+  text-decoration: none;
 
   &:active,
   &:focus,
   &:hover { text-decoration: none; }
 }
 
+
 .button--primary {
-  &,
+  background: @color-primary;
+  color: @color-primary-offset;
+
   &:active,
   &:focus,
-  &:hover { color: @color-primary; }
+  &:hover { color: @color-primary-offset; }
 }
 
 .button--secondary {
-  &,
+  background: @color-secondary;
+  color: #fff;
+
   &:active,
   &:focus,
-  &:hover { color: @color-secondary; }
+  &:hover { color: @color-secondary-offset; }
+}
+
+.button--large {
+  font-size: 1.25em;
 }
