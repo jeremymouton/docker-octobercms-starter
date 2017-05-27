@@ -1,0 +1,37 @@
+/**
+ * Nav toggle
+ *
+ */
+
+.nav-toggle-wrapper {
+  padding: 15px;
+  line-height: 100%;
+
+  @media (min-width: @screen-sm) {
+    display: none;
+  }
+}
+
+.nav-toggle:active,
+.nav-toggle:focus,
+.nav-toggle:hover,
+.nav-toggle { text-decoration: none; }
+
+.nav-toggle {
+  display: table;
+  width: 100%;
+}
+
+.nav-toggle__icon,
+.nav-toggle__menu {
+  display: table-cell;
+  vertical-align: top;
+  padding: 0;
+}
+
+.nav-toggle__icon {
+  padding-left: 10px;
+  text-align: right;
+}
+
+.nav-toggle__menu { text-transform: uppercase; }

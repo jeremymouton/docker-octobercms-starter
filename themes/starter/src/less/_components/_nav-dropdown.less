@@ -1,0 +1,47 @@
+/**
+ * Nav dropdown
+ *
+ */
+
+.nav-dropdown {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: .85em;
+  width: 100%;
+
+  @media (min-width: @screen-sm) {
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 2px 7px rgba(0,0,0,.2);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    padding: 10px 0;
+    margin: 0;
+    transform: translateX(-50%) scale(.96);
+    transition: all .12s ease;
+    width: auto;
+    z-index: 1000;
+
+    .nav-section__item.hover &,
+    .nav-section__item:hover & {
+      visibility: visible;
+      opacity: 1;
+      top: 40px;
+    }
+  }
+}
+
+.nav-dropdown__item {
+  > a {
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    line-height: 1em;
+    color: @base-text-color;
+  }
+}

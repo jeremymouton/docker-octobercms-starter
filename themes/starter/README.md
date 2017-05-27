@@ -2,10 +2,12 @@
 
 ## Installation
 
-Run `yarn` to install theme and dev dependencies.
+`npm run install-all`
 
 ## Development
 
-Run `gulp` to compile source.
+`npm run dev`
 
-Run `gulp watch` to watch source.
+## Build
+
+`npm run build`

@@ -9,7 +9,11 @@ body {
 }
 
 body {
+  background-color: @base-background-color;
   color: @base-text-color;
+  font-family: @font-primary;
+  .m-font-smoothing();
+  text-rendering: optimizeLegibility;
 }
 
 ::-moz-selection {
@@ -20,10 +24,4 @@ body {
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
-}
-
-
-img {
-  max-width: 100%;
-  height: auto;
 }

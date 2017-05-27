@@ -45,7 +45,7 @@ gulp.task('css:compile', function() {
       return 'Error compiling LESS: ' + error.message;
     })))
     .pipe(pxtorem({
-      root_value: 18
+      root_value: 16
     }))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))

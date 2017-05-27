@@ -4,16 +4,17 @@
  */
 
 import $ from 'jquery'
+import '../vendors/modernizr'
 
-$('.js-nav-toggle').click( function(e) {
+$('.js-nav-collapse').click(function(e) {
   e.preventDefault()
-  var target = $(this).data('nav-collapse')
+  const target = $(this).data('nav-collapse')
   $(target).toggleClass('nav-is-open')
 })
 
-Modernizr.on('touchevents', function(result) {
+Modernizr.on('touchevents', (result) => { // eslint-disable-line no-undef
   if (result) {
-    $('html').on('click', function(e) {
+    $('html').on('click', () => {
       $('.nav-section__item').removeClass('hover')
     })
 

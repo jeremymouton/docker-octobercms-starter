@@ -1,8 +1,8 @@
 bower_components
 node_modules
+npm-debug.log
 .DS_Store
 
-# Ignore meta, content and static page folders managed by backend users
-
+# Ignore meta, content folders, managed by backend users.
 content
 meta

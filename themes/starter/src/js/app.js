@@ -3,22 +3,17 @@
  *
  */
 
-/* jQuery */
 import $ from 'jquery'
-import jQuery from 'jquery'
-
-/* Modernizr */
-import './vendors/modernizr'
-
-/* Retina */
 import retina from 'retinajs'
 
 /*
  * Components
  */
-import NavCollapse from './components/nav-collapse'
-import Modal from './components/modal'
+import './components/nav-collapse'
+import './components/modal'
 
+/* Init Retinajs */
+retina()
 
 /* Make jQuery available to October CMS */
 window.$ = $
