@@ -3,7 +3,6 @@
  *
  */
 
-import $ from 'jquery'
-window.jQuery = require('jquery') // for Bootstap
-var transition = require('bootstrap/js/transition')
-var modal = require('bootstrap/js/modal')
+window.jQuery = require('jquery'); // for Bootstap
+require('bootstrap/js/transition');
+require('bootstrap/js/modal');

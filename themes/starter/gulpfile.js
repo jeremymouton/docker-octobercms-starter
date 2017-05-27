@@ -14,6 +14,7 @@ var
   pxtorem      = require('gulp-pxtorem'),
   notify       = require('gulp-notify'),
   rename       = require('gulp-rename'),
+  eslint       = require('gulp-eslint'),
   path         = require('path'),
   util         = require('gulp-util'),
   autoprefixer = require('gulp-autoprefixer'),
@@ -37,6 +38,7 @@ var paths = {
  */
 
 gulp.task('css', ['css:compile', 'css:minify']);
+gulp.task('css:dev', ['css:compile']);
 
 gulp.task('css:compile', function() {
   return gulp
@@ -75,7 +77,16 @@ gulp.task('css:minify', ['css:compile'], function() {
  * Concatenates and minifies scripts
  */
 
-gulp.task('js', ['js:browserify', 'js:minify']);
+gulp.task('js', ['js:lint', 'js:browserify', 'js:minify']);
+gulp.task('js:dev', ['js:browserify']);
+
+gulp.task('js:lint', function() {
+  return gulp.src(['**/*.js','!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
+    .pipe(notify({ message: 'Successfully linted Javascript' }));
+});
 
 gulp.task('js:browserify', function() {
   var b = browserify({
@@ -89,7 +100,7 @@ gulp.task('js:browserify', function() {
     .pipe(source('bundle.js'))
     .on('error', util.log)
     .pipe(gulp.dest(paths.dest + '/js'))
-    .pipe(notify({ message: 'Successfully compiled js bundle' }));
+    .pipe(notify({ message: 'Successfully compiled Javascript bundle' }));
 });
 
 gulp.task('js:minify', ['js:browserify'], function(cb) {
@@ -102,7 +113,7 @@ gulp.task('js:minify', ['js:browserify'], function(cb) {
       }
     }),
     gulp.dest(paths.dest + '/js'),
-    notify({ message: 'Successfully minified javascript bundle' })
+    notify({ message: 'Successfully minified Javascript bundle' })
   ], cb);
 });
 
@@ -169,12 +180,11 @@ gulp.task('default', ['rimraf'], function() {
  */
 
 gulp.task('watch', function() {
-
   // Watch .less files
-  gulp.watch(paths.src + '/less/**/*.less', ['css']);
+  gulp.watch(paths.src + '/less/**/*.less', ['css:dev']);
 
   // Watch .js files
-  gulp.watch(paths.src + '/js/**/*.js', ['js']);
+  gulp.watch(paths.src + '/js/**/*.js', ['js:dev']);
 
   // Livereload
   livereload.listen();
