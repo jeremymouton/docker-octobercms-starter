@@ -101,7 +101,8 @@ figure {
   margin: 1em 40px;
 }
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 pre {
@@ -151,7 +152,8 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 input[type="number"]::-webkit-inner-spin-button,
@@ -160,7 +162,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
@@ -196,7 +199,8 @@ th {
   *:after {
     background: transparent !important;
     color: #000 !important;
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     text-shadow: none !important;
   }
   a,
@@ -261,10 +265,12 @@ th {
   }
 }
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 html {
@@ -650,7 +656,8 @@ hr {
   padding-left: 2rem;
 }
 .row {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -691,7 +698,8 @@ hr {
 .col-xs-7,
 .col-xs-8,
 .col-xs-9 {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -ms-flex: 0 0 auto;
   -webkit-box-flex: 0;
   flex: 0 0 auto;
@@ -699,7 +707,6 @@ hr {
   padding-left: 1rem;
 }
 .col-xs {
-  -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   -webkit-box-flex: 1;
   flex-grow: 1;
@@ -869,7 +876,8 @@ hr {
   .col-sm-7,
   .col-sm-8,
   .col-sm-9 {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
@@ -877,7 +885,6 @@ hr {
     padding-left: 1rem;
   }
   .col-sm {
-    -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     -webkit-box-flex: 1;
     flex-grow: 1;
@@ -1048,7 +1055,8 @@ hr {
   .col-md-7,
   .col-md-8,
   .col-md-9 {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
@@ -1056,7 +1064,6 @@ hr {
     padding-left: 1rem;
   }
   .col-md {
-    -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     -webkit-box-flex: 1;
     flex-grow: 1;
@@ -1227,7 +1234,8 @@ hr {
   .col-lg-7,
   .col-lg-8,
   .col-lg-9 {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     -ms-flex: 0 0 auto;
     -webkit-box-flex: 0;
     flex: 0 0 auto;
@@ -1235,7 +1243,6 @@ hr {
     padding-left: 1rem;
   }
   .col-lg {
-    -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     -webkit-box-flex: 1;
     flex-grow: 1;
@@ -1888,7 +1895,8 @@ img {
           appearance: none;
   border: 1px #ddd solid;
   border-radius: 0;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   height: auto;
   padding: 10px 15px;
   width: 100%;
@@ -1963,7 +1971,7 @@ textarea.form-control {
   clear: both;
   max-height: 0;
   -webkit-transition: opacity 0.12s ease-in;
-          transition: opacity 0.12s ease-in;
+  transition: opacity 0.12s ease-in;
   overflow: hidden;
   text-align: center;
 }
@@ -2020,7 +2028,8 @@ textarea.form-control {
   .nav-dropdown {
     visibility: hidden;
     opacity: 0;
-    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 20px;
     left: 50%;
@@ -2029,7 +2038,7 @@ textarea.form-control {
     -webkit-transform: translateX(-50%) scale(0.96);
             transform: translateX(-50%) scale(0.96);
     -webkit-transition: all .12s ease;
-            transition: all .12s ease;
+    transition: all .12s ease;
     width: auto;
     z-index: 1000;
   }
@@ -2110,7 +2119,7 @@ textarea.form-control {
   padding-top: 8px;
   padding-bottom: 8px;
   -webkit-transition: color .12s ease;
-          transition: color .12s ease;
+  transition: color .12s ease;
   text-decoration: none;
 }
 .nav-section__item:hover > a,

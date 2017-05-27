@@ -21,6 +21,7 @@ var
   source       = require('vinyl-source-stream'),
   babelify     = require('babelify'),
   browserify   = require('browserify'),
+  pump         = require('pump'),
   livereload   = require('gulp-livereload');
 
 var paths = {
@@ -91,17 +92,18 @@ gulp.task('js:browserify', function() {
     .pipe(notify({ message: 'Successfully compiled js bundle' }));
 });
 
-gulp.task('js:minify', ['js:browserify'], function() {
-  return gulp
-    .src(paths.dest + '/js/bundle.js')
-    .pipe(uglify({ outSourceMap: true }))
-    .pipe(rename(function (path) {
+gulp.task('js:minify', ['js:browserify'], function(cb) {
+  pump([
+    gulp.src(paths.dest + '/js/bundle.js'),
+    uglify(),
+    rename(function (path) {
       if(path.extname === '.js') {
         path.basename += '.min';
       }
-    }))
-    .pipe(gulp.dest(paths.dest + '/js'))
-    .pipe(notify({ message: 'Successfully compiled javascript' }));
+    }),
+    gulp.dest(paths.dest + '/js'),
+    notify({ message: 'Successfully minified javascript bundle' })
+  ], cb);
 });
 
 /**

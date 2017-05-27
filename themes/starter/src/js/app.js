@@ -10,11 +10,11 @@ import retina from 'retinajs'
  * Components
  */
 import './components/nav-collapse'
-import './components/modal'
+// import './components/modal'
 
 /* Init Retinajs */
 retina()
 
 /* Make jQuery available to October CMS */
 window.$ = $
-window.jQuery = jQuery
+window.jQuery = $

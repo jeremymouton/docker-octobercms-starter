@@ -12,7 +12,7 @@ $('.js-nav-collapse').click(function(e) {
   $(target).toggleClass('nav-is-open')
 })
 
-Modernizr.on('touchevents', (result) => { // eslint-disable-line no-undef
+Modernizr.on('touchevents', (result) => {
   if (result) {
     $('html').on('click', () => {
       $('.nav-section__item').removeClass('hover')
