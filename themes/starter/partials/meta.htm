@@ -8,10 +8,10 @@
 <meta name="keywords" content="{{ this.page.meta_keywords }}">
 
 {% styles %}
-{% if this.environment == 'dev' %}
-<link rel="stylesheet" href="{{ 'assets/css/styles.css' | theme }}">
-{% else %}
+{% if this.environment == 'prod' %}
 <link rel="stylesheet" href="{{ 'assets/css/styles.min.css' | theme }}">
+{% else %}
+<link rel="stylesheet" href="{{ 'assets/css/styles.css' | theme }}">
 {% endif %}
 
 <!--[if lt IE 9]>
